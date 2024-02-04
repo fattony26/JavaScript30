@@ -69,6 +69,14 @@
     key.classList.add('playing');
     
   });
+
+  function removeTransition() {
+    if(e.propertyName !== 'transitioned') return; // skip it if it's not a transform
+  };
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitioned', removeTransition));
+
+
 </script>
 
 
